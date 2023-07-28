@@ -1,0 +1,43 @@
+header {
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  justify-content: flex-start;
+  padding: 0px 40px 0px 40px;
+  background-color: black; }
+  header span {
+    width: 70%;
+    display: flex;
+    margin-top: 0.1rem;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: white; }
+  header .heading {
+    border: 2px solid #0f0f0f;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center; }
+    header .heading span {
+      margin: auto;
+      margin-left: 150px;
+      padding: 10px;
+      font-size: 2rem;
+      text-align: center;
+      width: 70%;
+      font-weight: bolder; }
+    header .heading button {
+      height: 2rem;
+      width: 10rem;
+      background-color: blue;
+      border: none; }
+      header .heading button a {
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 1rem;
+        color: white; }
+        header .heading button a:hover {
+          font-size: 1.2rem; }

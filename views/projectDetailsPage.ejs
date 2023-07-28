@@ -1,0 +1,185 @@
+<!-- if issue are generate otherwise goes filter issue page -->
+
+
+
+<% if(showIssue){%>
+
+    <div id="show-data">
+        <div id="bug-count">
+
+
+            <!-- how many bugs are their -->
+
+        <div class="circle"> 
+
+            <p>
+                Total Bug:
+                <%= issue.length%>
+            </p>
+        </div>
+
+
+
+    
+        <div id="project-data">
+            <h2>Project Info</h2>
+            <table>
+                <tr>
+                    <td>project name:</td>
+                    <td><%= project.projectname%></td>
+                </tr>
+                <tr>
+                    <td>project author:</td>
+                    <td><%= project.projectauthor%></td>
+                </tr>
+                <tr>
+                    <td>project description:</td>
+                    <td><%= project.projectdescription%></td>
+                </tr>
+            </table>
+        </div>
+
+        
+        <div id="report-issue">
+            <a href="/issue/issuePage/<%= project._id %>"><i class="fa fa-calendar-plus-o" style="font-size:24px"></i>
+                Report Issue
+            </a>
+        </div>
+
+
+ 
+</div>
+
+
+    <!-- if there are no bug then -->
+    <% if(issue.length==0){%>
+        <div class="no-bugs">
+            <h1>No bugs found!!</h1>
+        </div>
+    <%}%>
+
+
+
+
+    <!-- if there are bug then -->
+
+    <% if(issue.length>0){%>
+        <section>
+            <div id="search-section">
+
+               
+
+
+
+                    <!-- search by label -->
+                    <form action="/issue/filterIssue" method="post">
+                        <!-- <div class="user-box" style="display: flex; flex-direction: column; width: 100%; height: 50%;">
+                            <select name="label1" class="selectbox" style="width:80%;" >
+                                <% for(i of labelSet){%>
+                                    <option value="<%= i%>"><%= i%></option>  
+                                <%}%>
+                            </select>
+                        </div> -->
+                        <div class="user-box" style="display: flex; flex-direction: column; width: 100%; height: 50%;">
+                            <select name="label2" class="selectbox" style="width:80%;">
+                                <% for(i of labelSet){%>
+                                    <option value="<%= i%>"><%= i%></option>   
+                                <%}%>
+                            </select>
+                            <input type="hidden" name="projectId" value="<%= project._id%>">
+                        </div>
+                        <a href="">
+                            <input class="btn" type="submit" value="search">
+                        </a>
+                    </form>
+
+
+
+                    <!-- search by author -->
+                    <form action="/issue/filterIssue" method="post">
+                        <div class="user-box" style="display: flex; flex-direction: column; width: 100%; height: 50%;">
+                          
+                            <label for="">Author</label>
+                            <input type="text" name="searchAuthor" required>
+                        </div>
+                        <input type="hidden" name="projectId" value="<%= project._id%>">
+                        <a href="">
+                            <input  class="btn" type="submit" value="Search">
+                        </a>
+                    </form>
+
+                    <!-- search by title or decription -->
+                    <form action="/issue/filterIssue" method="post">
+                        <div class="user-box" style="display: flex; flex-direction: column; width: 100%; height: 50%;">
+                          
+                            <label for="">Title or Description</label>
+                            <input type="text" name="searchTitleDesc" required>
+                        </div>
+                        <input type="hidden" name="projectId" value="<%= project._id%>">
+                        <a href="">
+                            <input  class="btn"  type="submit" value="Search">
+                        </a>
+                    </form>
+
+             
+
+            </div>
+     
+            <!-- show all the issue -->
+            <div id="show-issue">
+                <table>
+                    <tr>
+                        <th>title</th>
+                        <th>description</th>
+                        <th>author</th>
+                        <th>labels</th>
+                    </tr>
+                    <% for(i of issue){%>
+                        <tr>
+                            <td><%=i.title%></td>
+                            <td><%=i.description%></td>
+                            <td><%=i.author%></td>
+                            <td><%= i.labels%></td>
+                        </tr>
+                    <%}%>
+                </table>
+            </div>  
+   
+    <%}%>
+
+
+    </div>
+<%}%>
+
+<!-- filter the issue from search by author, title, decription and labels -->
+<% if(!showIssue){%>
+    <div id="filter-data">
+        <h1>Filter Data</h1>
+        <table cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <th>issue Title</th>
+                <th>Description</th>
+                <th>Author</th>
+                <th>label</th>
+            </tr>
+            <% for(i of filterdata) {%>
+                <tr>
+                    <td>
+                        <%= i.title %>
+                    </td>
+                    <td>
+                        <%= i.description %>
+                    </td>
+                    <td>
+                        <%= i.author %>
+                    </td>
+                    <td>
+                        <%= i.labels %>
+                    </td>
+                </tr>
+                <%}%>
+        </table>
+    </div>
+</section>
+    <%}%>
+

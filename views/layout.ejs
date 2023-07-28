@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= title %></title>
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/createproject.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/projectdetailpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <%- style %>
+</head>
+<body>
+    <!-- for header part -->
+    <%- include ('_header'); %>
+ 
+    <!-- this is a body part content which is a variable -->
+    <div id="main">
+        <div class="border"></div>
+            <div class="frame">
+                <%- body %>
+            </div>
+
+    <!-- this is end part of body variable content -->
+
+    <%- script %>
+</body>
+</html>

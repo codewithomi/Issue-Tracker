@@ -1,0 +1,80 @@
+#createProject .create-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background-color: #000000;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6); }
+  #createProject .create-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center; }
+  #createProject .create-box form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    #createProject .create-box form .user-box {
+      position: relative; }
+      #createProject .create-box form .user-box input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        background: transparent; }
+        #createProject .create-box form .user-box input:focus ~ label, #createProject .create-box form .user-box input:valid ~ label {
+          top: -20px;
+          left: 0;
+          color: #03e9f4;
+          font-size: 12px; }
+      #createProject .create-box form .user-box label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        pointer-events: none;
+        transition: .5s; }
+      #createProject .create-box form .user-box a:hover {
+        background: #03e9f4;
+        color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4; }
+      #createProject .create-box form .user-box #selectbox {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 20px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        background: transparent; }
+        #createProject .create-box form .user-box #selectbox option {
+          color: black; }
+    #createProject .create-box form input[type="submit"] {
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      color: white;
+      font-size: 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+      overflow: hidden;
+      transition: .5s;
+      margin-top: 40px;
+      letter-spacing: 4px;
+      border: none;
+      background: blue;
+      border-radius: 10px;
+      box-shadow: rgba(202, 202, 202, 0.56) 0px 22px 70px 4px; }

@@ -1,0 +1,27 @@
+<!-- main page or home page -->
+<div class="main-parent">
+        <h1>Projects</h1>
+<div id="main-page">
+
+
+    <!-- <table cellpadding="0" cellspacing="0" border="0">
+        <thead>
+            <tr>
+                <th>Project</th>
+                <th>Author</th>
+                <th>Description</th>
+                <th>Issues</th>
+            </tr>
+    </table>
+</thead> -->
+<% for(i of project){ %>
+    <div class="project-list">
+        <p style="font-size: 1.4rem; color: white;"><%= i.projectname%></p>
+        <p><span style="color: rgb(0, 0, 0); font-weight:600;">Author: </span> <%= i.projectauthor%></p><br>
+        <!-- <p><%= i.projectdescription%></p> -->
+        <p  id="showIssue"><a href="/project/issue?projectid=<%=i.id%>" style="color: rgb(255, 255, 255);"><i class='fas fa-eye' style='font-size:24px'></i> Show Issue</a></p>
+    </div>
+<% } %> 
+</div>
+
+</div>

@@ -1,0 +1,27 @@
+{
+  "name": "issuetracker",
+  "version": "1.0.0",
+  "description": "issueTracker nodeJs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "Sanjay Gawai",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1",
+    "mongoose": "^6.9.1",
+    "node-sass-middleware": "^1.0.1",
+    "nodemon": "^2.0.20"
+  },
+  
+  "devDependencies": {
+    "webpack": "^5.82.0",
+    "webpack-cli": "^5.0.2"
+  }
+}
