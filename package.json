@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },
-  "author": "Sanjay Gawai",
+  "author": "Omkar Chobhe",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.1",
